@@ -4,14 +4,14 @@ import 'package:todo/widgets/item.dart';
 
 import '../model/todo.dart';
 
-class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+class HomeP extends StatefulWidget {
+  HomeP({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  State<HomeP> createState() => _HomePState();
 }
 
-class _HomeState extends State<Home> {
+class _HomePState extends State<HomeP> {
   final todosList = ToDo.todoList();
   List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'All To Dos',
+                          'All Activities',
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       for (ToDo todoo in _foundToDo.reversed)
-                        ToDoItem(
+                        ToDoItemList(
                           todo: todoo,
                           onToDoChanged: _handleToDoChange,
                           onDeleteItem: _deleteToDoItem,
@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
                   child: TextField(
                     controller: _todoController,
                     decoration: InputDecoration(
-                        hintText: 'Add a new todo item',
+                        hintText: 'Add a New Activity',
                         border: InputBorder.none),
                   ),
                 ),
@@ -188,7 +188,7 @@ class _HomeState extends State<Home> {
             minWidth: 25,
           ),
           border: InputBorder.none,
-          hintText: 'Search',
+          hintText: 'Search ',
           hintStyle: TextStyle(color: tdGrey),
         ),
       ),

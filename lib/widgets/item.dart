@@ -3,12 +3,12 @@ import 'package:todo/const/color.dart';
 
 import '../model/todo.dart';
 
-class ToDoItem extends StatelessWidget {
+class ToDoItemList extends StatelessWidget {
   final ToDo todo;
   final onToDoChanged;
   final onDeleteItem;
 
-  const ToDoItem({
+  const ToDoItemList({
     Key? key,
     required this.todo,
     required this.onToDoChanged,
